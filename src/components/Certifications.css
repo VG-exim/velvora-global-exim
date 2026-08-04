@@ -1,0 +1,125 @@
+.certifications {
+    padding: 90px 8%;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    color: #0B3D2E;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    max-width: 750px;
+    margin: auto;
+    margin-bottom: 60px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    cursor: pointer;
+
+    border: 1px solid rgba(11, 61, 46, 0.08);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    border-color: #FFD166;
+}
+
+.certificate-card h3 {
+    color: #0B3D2E;
+    font-size: 28px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.certificate-card:hover h3 {
+    color: #145a43;
+}
+
+.certificate-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.certificate-card span {
+    display: inline-block;
+
+    background: #FFD166;
+    color: #0B3D2E;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.certificate-card:hover span {
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(255, 209, 102, 0.45);
+}
+
+@media (max-width: 992px) {
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .certifications {
+        padding: 70px 5%;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        padding: 30px;
+    }
+}
