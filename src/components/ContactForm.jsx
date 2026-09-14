@@ -23,7 +23,7 @@ function ContactForm() {
     message: "",
   });
 
-  const phoneNumber = "916363440530";
+  const phoneNumber = "916362185920";
   const businessEmail = "velvoraglobalexim@gmail.com";
 
   useEffect(() => {
@@ -128,14 +128,16 @@ ${formData.fullName}`;
       />
 
       <section className="contact-form-section">
+
         <h2>Export Inquiry</h2>
 
         <p className="contact-subtitle">
-          Interested in importing our premium agricultural products?
-          Fill in the form below and our export team will contact you shortly.
+          Interested in sourcing agricultural products from India?
+          Fill in the form below and share your requirements with our team.
         </p>
 
         <form className="contact-form">
+
           <input
             type="text"
             name="fullName"
@@ -186,11 +188,25 @@ ${formData.fullName}`;
             onChange={handleChange}
             required
           >
-            <option value="">Select Product *</option>
-            <option value="Rice">Rice</option>
-            <option value="Chilli Powder">Chilli Powder</option>
-            <option value="Turmeric Powder">Turmeric Powder</option>
-            <option value="Other">Other</option>
+            <option value="">
+              Select Product *
+            </option>
+
+            <option value="Rice">
+              Rice
+            </option>
+
+            <option value="Chilli Powder">
+              Chilli Powder
+            </option>
+
+            <option value="Turmeric Powder">
+              Turmeric Powder
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
           </select>
 
           <textarea
@@ -202,7 +218,9 @@ ${formData.fullName}`;
             required
           ></textarea>
 
+
           <div className="button-group">
+
             <button
               type="button"
               className="email-btn"
@@ -218,8 +236,11 @@ ${formData.fullName}`;
             >
               💬 Send WhatsApp
             </button>
+
           </div>
+
         </form>
+
       </section>
     </>
   );

@@ -3,45 +3,74 @@ import "./WhyChoose.css";
 function WhyChoose() {
   return (
     <section className="why-choose">
-      <h2 data-aos="fade-up">Why Choose Velvora Global Exim?</h2>
+
+      <div className="why-choose-header" data-aos="fade-up">
+        <p className="section-eyebrow">
+          WHY VELVORA GLOBAL EXIM
+        </p>
+
+        <h2>
+          A Professional Approach to
+          <span> Agricultural Trade</span>
+        </h2>
+
+        <p className="section-intro">
+          We focus on quality-focused sourcing, clear communication,
+          and dependable service to build lasting business relationships.
+        </p>
+      </div>
 
       <div className="features">
+
         <div
           className="feature-card"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <h3>Premium Quality</h3>
+          <div className="feature-number">01</div>
+
+          <h3>Quality-Focused Sourcing</h3>
+
           <p>
-            We export carefully selected agricultural products that meet
-            international quality standards.
+            We focus on carefully selecting agricultural products
+            suitable for our buyers' requirements and intended markets.
           </p>
         </div>
+
 
         <div
           className="feature-card"
           data-aos="fade-up"
-          data-aos-delay="250"
+          data-aos-delay="200"
         >
-          <h3>Trusted Worldwide</h3>
+          <div className="feature-number">02</div>
+
+          <h3>Reliable Communication</h3>
+
           <p>
-            Building long-term partnerships through transparency, reliability,
-            and timely delivery.
+            Clear communication and attention to buyer requirements
+            help create a smooth and professional trading experience.
           </p>
         </div>
+
 
         <div
           className="feature-card"
           data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos-delay="300"
         >
-          <h3>Global Reach</h3>
+          <div className="feature-number">03</div>
+
+          <h3>Export-Ready Service</h3>
+
           <p>
-            Connecting Indian farmers and suppliers with buyers across the
-            globe.
+            From product discussions to packing and shipment coordination,
+            we aim to make every stage of the export process straightforward.
           </p>
         </div>
+
       </div>
+
     </section>
   );
 }

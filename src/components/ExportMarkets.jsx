@@ -1,82 +1,101 @@
 import "./ExportMarkets.css";
 
 function ExportMarkets() {
+  const markets = [
+    {
+      flag: "🇦🇪",
+      name: "United Arab Emirates",
+    },
+    {
+      flag: "🇸🇦",
+      name: "Saudi Arabia",
+    },
+    {
+      flag: "🇩🇪",
+      name: "Germany",
+    },
+    {
+      flag: "🇮🇹",
+      name: "Italy",
+    },
+    {
+      flag: "🇺🇸",
+      name: "United States",
+    },
+    {
+      flag: "🇲🇾",
+      name: "Malaysia",
+    },
+  ];
+
   return (
     <section className="markets">
-      <div className="container">
-        <h2
-          className="section-title"
-          data-aos="fade-up"
-        >
-          Our Export Markets
-        </h2>
 
-        <p
-          className="section-subtitle"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          We proudly serve customers across multiple international markets by
-          delivering premium-quality agricultural products with reliable export
-          services.
-        </p>
+      <div className="markets-container">
+
+        <div className="markets-header" data-aos="fade-up">
+
+          <p className="markets-eyebrow">
+            GLOBAL MARKET FOCUS
+          </p>
+
+          <h2>
+            Building Opportunities
+            <span> Beyond India</span>
+          </h2>
+
+          <p>
+            As a growing export business, we are exploring opportunities
+            with international buyers and developing relationships across
+            selected global markets.
+          </p>
+
+        </div>
+
 
         <div className="market-grid">
-          <div
-            className="market-card"
-            data-aos="fade-right"
-            data-aos-delay="100"
-          >
-            <div className="flag">🇦🇪</div>
-            <h3>United Arab Emirates</h3>
-          </div>
 
-          <div
-            className="market-card"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            <div className="flag">🇸🇦</div>
-            <h3>Saudi Arabia</h3>
-          </div>
+          {markets.map((market, index) => (
 
-          <div
-            className="market-card"
-            data-aos="fade-right"
-            data-aos-delay="300"
-          >
-            <div className="flag">🇩🇪</div>
-            <h3>Germany</h3>
-          </div>
+            <div
+              className="market-card"
+              key={market.name}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
 
-          <div
-            className="market-card"
-            data-aos="fade-right"
-            data-aos-delay="400"
-          >
-            <div className="flag">🇮🇹</div>
-            <h3>Italy</h3>
-          </div>
+              <div className="flag">
+                {market.flag}
+              </div>
 
-          <div
-            className="market-card"
-            data-aos="fade-right"
-            data-aos-delay="500"
-          >
-            <div className="flag">🇺🇸</div>
-            <h3>United States</h3>
-          </div>
+              <h3>{market.name}</h3>
 
-          <div
-            className="market-card"
-            data-aos="fade-right"
-            data-aos-delay="600"
-          >
-            <div className="flag">🇲🇾</div>
-            <h3>Malaysia</h3>
-          </div>
+              <span className="market-label">
+                TARGET MARKET
+              </span>
+
+            </div>
+
+          ))}
+
         </div>
+
+
+        <div
+          className="markets-note"
+          data-aos="fade-up"
+        >
+          <p>
+            Interested in sourcing agricultural products from India?
+          </p>
+
+          <a href="/contact">
+            Start a Conversation →
+          </a>
+        </div>
+
       </div>
+
     </section>
   );
 }

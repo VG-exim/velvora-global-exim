@@ -3,7 +3,6 @@ import WhyChoose from "../components/WhyChoose";
 import Products from "../components/Products";
 import ExportMarkets from "../components/ExportMarkets";
 import Statistics from "../components/Statistics";
-import Certifications from "../components/Certifications";
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 
@@ -15,7 +14,6 @@ function Home() {
       <Products />
       <ExportMarkets />
       <Statistics />
-      <Certifications />
       <Testimonials />
       <CallToAction />
     </>

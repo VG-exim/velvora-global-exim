@@ -9,11 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
+      setSticky(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,57 +19,74 @@ function Navbar() {
     };
   }, []);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className={sticky ? "navbar sticky" : "navbar"}>
-      <div className="logo-container">
+
+      <NavLink
+        to="/"
+        className="logo-container"
+        onClick={closeMenu}
+      >
         <img
           src={logo}
           alt="Velvora Global Exim Logo"
           className="logo"
         />
-      </div>
+      </NavLink>
 
-      <div
+
+      <button
         className="menu-icon"
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={menuOpen}
       >
-        {menuOpen ? "✖" : "☰"}
-      </div>
+        {menuOpen ? "✕" : "☰"}
+      </button>
+
 
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+
         <li>
-          <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+          <NavLink to="/" end onClick={closeMenu}>
             Home
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/about" onClick={closeMenu}>
             About Us
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/products" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/products" onClick={closeMenu}>
             Products
           </NavLink>
         </li>
 
         <li>
-          <NavLink
-            to="/export-markets"
-            onClick={() => setMenuOpen(false)}
-          >
-            Export Markets
+          <NavLink to="/export-markets" onClick={closeMenu}>
+            Global Markets
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+          <NavLink
+            to="/contact"
+            className="nav-contact"
+            onClick={closeMenu}
+          >
             Contact
           </NavLink>
         </li>
+
       </ul>
+
     </nav>
   );
 }

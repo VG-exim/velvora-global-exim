@@ -1,45 +1,76 @@
 import "./Statistics.css";
 
 function Statistics() {
+  const focusAreas = [
+    {
+      number: "01",
+      title: "Quality",
+      text: "Careful attention to product sourcing, handling and buyer requirements.",
+    },
+    {
+      number: "02",
+      title: "Transparency",
+      text: "Clear communication and straightforward discussions throughout the process.",
+    },
+    {
+      number: "03",
+      title: "Flexibility",
+      text: "We work to understand individual product, packing and sourcing requirements.",
+    },
+    {
+      number: "04",
+      title: "Long-Term Growth",
+      text: "Building meaningful relationships with buyers as we grow our export business.",
+    },
+  ];
+
   return (
     <section className="statistics">
-      <div className="stats-container">
-        <div
-          className="stat-card"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h2>25+</h2>
-          <p>Countries Served</p>
-        </div>
 
-        <div
-          className="stat-card"
-          data-aos="fade-up"
-          data-aos-delay="250"
-        >
-          <h2>500+</h2>
-          <p>Successful Shipments</p>
-        </div>
+      <div className="statistics-header" data-aos="fade-up">
 
-        <div
-          className="stat-card"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <h2>100%</h2>
-          <p>Premium Quality</p>
-        </div>
+        <p className="statistics-eyebrow">
+          OUR APPROACH
+        </p>
 
-        <div
-          className="stat-card"
-          data-aos="fade-up"
-          data-aos-delay="550"
-        >
-          <h2>24/7</h2>
-          <p>Customer Support</p>
-        </div>
+        <h2>
+          Built on the Right
+          <span> Foundations</span>
+        </h2>
+
+        <p>
+          As a growing export business, our focus is on building a
+          dependable foundation for long-term international trade.
+        </p>
+
       </div>
+
+
+      <div className="stats-container">
+
+        {focusAreas.map((area, index) => (
+
+          <div
+            className="stat-card"
+            key={area.number}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+
+            <span className="stat-number">
+              {area.number}
+            </span>
+
+            <h3>{area.title}</h3>
+
+            <p>{area.text}</p>
+
+          </div>
+
+        ))}
+
+      </div>
+
     </section>
   );
 }

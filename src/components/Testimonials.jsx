@@ -1,73 +1,72 @@
 import "./Testimonials.css";
 
 function Testimonials() {
+  const expectations = [
+    {
+      title: "Clear Communication",
+      text: "Straightforward discussions about products, requirements, packing and order details.",
+    },
+    {
+      title: "Buyer-Focused Approach",
+      text: "We take time to understand buyer requirements and work toward suitable sourcing solutions.",
+    },
+    {
+      title: "Professional Coordination",
+      text: "We aim to keep the sourcing and export process organized, transparent and easy to understand.",
+    },
+  ];
+
   return (
     <section className="testimonials">
+
       <div className="container">
 
-        <h2
-          className="section-title"
+        <div
+          className="testimonials-header"
           data-aos="fade-up"
         >
-          What Our Clients Say
-        </h2>
 
-        <p
-          className="section-subtitle"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          Building long-term relationships through quality products and reliable
-          export services.
-        </p>
+          <p className="testimonials-eyebrow">
+            WHAT BUYERS CAN EXPECT
+          </p>
+
+          <h2 className="section-title">
+            A Simple Approach to
+            <span> Doing Business</span>
+          </h2>
+
+          <p className="section-subtitle">
+            We believe good international business starts with clear
+            communication, attention to requirements and a professional
+            approach from the beginning.
+          </p>
+
+        </div>
+
 
         <div className="testimonial-grid">
 
-          <div
-            className="testimonial-card"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <p>
-              "Excellent product quality and timely delivery. Velvora Global
-              Exim has become our trusted export partner."
-            </p>
+          {expectations.map((item, index) => (
 
-            <h4>Ahmed Al Mansoori</h4>
-            <span>UAE Importer</span>
-          </div>
+            <div
+              className="testimonial-card"
+              key={item.title}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
 
-          <div
-            className="testimonial-card"
-            data-aos="zoom-in"
-            data-aos-delay="250"
-          >
-            <p>
-              "Professional communication and outstanding service. Highly
-              recommended for international trade."
-            </p>
+              <h3>{item.title}</h3>
 
-            <h4>Michael Schneider</h4>
-            <span>Germany Buyer</span>
-          </div>
+              <p>{item.text}</p>
 
-          <div
-            className="testimonial-card"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <p>
-              "Premium agricultural products with consistent quality. Looking
-              forward to many more shipments."
-            </p>
+            </div>
 
-            <h4>Faisal Al Harbi</h4>
-            <span>Saudi Arabia Distributor</span>
-          </div>
+          ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

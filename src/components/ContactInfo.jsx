@@ -1,54 +1,82 @@
 import "./ContactInfo.css";
+
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaClock,
 } from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
 
 function ContactInfo() {
   return (
     <section className="contact-info">
 
-      <h2>Contact Information</h2>
+      <div className="contact-info-header">
+        <p className="contact-info-eyebrow">
+          GET IN TOUCH
+        </p>
 
-      <p className="info-subtitle">
-        We'd love to hear from you. Reach out to us for export inquiries,
-        quotations, partnerships, or any questions regarding our products.
-      </p>
+        <h2>
+          Contact
+          <span> Our Team</span>
+        </h2>
+
+        <p className="info-subtitle">
+          Have a requirement or an inquiry about our agricultural
+          products? Reach out to us and let's discuss your sourcing needs.
+        </p>
+      </div>
 
       <div className="info-card">
 
         <div className="info-item">
-          <FaPhoneAlt className="info-icon" />
+          <div className="info-icon-wrapper">
+            <FaPhoneAlt className="info-icon" />
+          </div>
+
           <div>
-            <h4>Phone</h4>
-            <p>+91 6363440530</p>
+            <p className="info-label">PHONE</p>
+            <h4>+91 6362185920</h4>
           </div>
         </div>
 
         <div className="info-item">
-          <MdEmail className="info-icon" />
+          <div className="info-icon-wrapper">
+            <MdEmail className="info-icon" />
+          </div>
+
           <div>
-            <h4>Email</h4>
-            <p>velvoraglobalexim@gmail.com</p>
+            <p className="info-label">EMAIL</p>
+            <h4>velvoraglobalexim@gmail.com</h4>
           </div>
         </div>
 
         <div className="info-item">
-          <FaMapMarkerAlt className="info-icon" />
+          <div className="info-icon-wrapper">
+            <FaMapMarkerAlt className="info-icon" />
+          </div>
+
           <div>
-            <h4>Location</h4>
-            <p>Yadgir, Karnataka, India</p>
+            <p className="info-label">BUSINESS LOCATION</p>
+            <h4>Yadgir, Karnataka</h4>
+            <p className="info-detail">
+              India
+            </p>
           </div>
         </div>
 
         <div className="info-item">
-          <FaClock className="info-icon" />
+          <div className="info-icon-wrapper">
+            <FaClock className="info-icon" />
+          </div>
+
           <div>
-            <h4>Business Hours</h4>
-            <p>Monday – Saturday</p>
-            <p>9:00 AM – 6:00 PM</p>
+            <p className="info-label">BUSINESS HOURS</p>
+            <h4>Monday – Saturday</h4>
+            <p className="info-detail">
+              9:00 AM – 6:00 PM
+            </p>
           </div>
         </div>
 

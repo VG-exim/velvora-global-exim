@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 function FloatingContact() {
   const [open, setOpen] = useState(false);
 
-  const phoneNumber = "916363440530";
+  const phoneNumber = "916362185920";
 
   const whatsappMessage =
     "Hello! I'm interested in your export products. Could you please share more details?";

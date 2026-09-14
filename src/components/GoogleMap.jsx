@@ -1,62 +1,124 @@
 import "./GoogleMap.css";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
 
 function GoogleMap() {
   return (
     <section className="google-map-section">
 
-      <h2>Our Location</h2>
+      <div
+        className="google-map-header"
+        data-aos="fade-up"
+      >
 
-      <p className="map-subtitle">
-        We are proudly based in Karnataka, India, serving clients across
-        international markets with premium agricultural products.
-      </p>
+        <p className="google-map-eyebrow">
+          OUR LOCATION
+        </p>
 
-      <div className="location-card">
+        <h2>
+          Based in
+          <span> Karnataka, India</span>
+        </h2>
 
-        <FaMapMarkerAlt className="location-icon" />
-
-        <h3>VELVORA GLOBAL EXIM</h3>
-
-        <p>Near Gunj Area</p>
-        <p>Yadgir District</p>
-        <p>Karnataka - 585202</p>
-        <p>India</p>
+        <p className="map-subtitle">
+          Velvora Global Exim is based in Yadgir, Karnataka, India,
+          with a focus on connecting Indian agricultural products with
+          international buyers.
+        </p>
 
       </div>
 
-      <div className="map-placeholder">
 
-        <h3>🗺️ Google Maps</h3>
+      <div
+        className="location-card"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
 
-        <p>
-          Our exact business location will be updated soon.
-        </p>
+        <div className="location-icon-wrapper">
+          <FaMapMarkerAlt className="location-icon" />
+        </div>
 
-        <p>
-          Until then, please contact us using any of the methods below.
-        </p>
+        <div className="location-details">
 
-        <div className="contact-options">
+          <p className="location-label">
+            BUSINESS ADDRESS
+          </p>
+
+          <h3>
+            VELVORA GLOBAL EXIM
+          </h3>
+
+          <p>Near Gunj Area</p>
+          <p>Yadgir District</p>
+          <p>Karnataka - 585202</p>
+          <p>India</p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        className="contact-options"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+
+        <div className="contact-option">
+
+          <FaPhoneAlt />
 
           <div>
-            <FaPhoneAlt />
-            <span>+91 6363440530</span>
-          </div>
-
-          <div>
-            <MdEmail />
-            <span>velvoraglobalexim@gmail.com</span>
-          </div>
-
-          <div>
-            <FaWhatsapp />
-            <span>WhatsApp Available</span>
+            <span>PHONE</span>
+            <strong>+91 6362185920</strong>
           </div>
 
         </div>
+
+
+        <div className="contact-option">
+
+          <MdEmail />
+
+          <div>
+            <span>EMAIL</span>
+            <strong>velvoraglobalexim@gmail.com</strong>
+          </div>
+
+        </div>
+
+
+        <div className="contact-option">
+
+          <FaWhatsapp />
+
+          <div>
+            <span>WHATSAPP</span>
+            <strong>+91 6362185920</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        className="map-coming-soon"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+
+        <p>
+          Our Google Maps location will be added once the exact
+          business location link is available.
+        </p>
 
       </div>
 

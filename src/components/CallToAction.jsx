@@ -1,17 +1,31 @@
 import "./CallToAction.css";
+import { Link } from "react-router-dom";
 
 function CallToAction() {
   return (
     <section className="cta">
+
       <div
         className="cta-content"
         data-aos="fade-up"
       >
-        <h2>Ready to Grow Your Business Globally?</h2>
 
-        <p data-aos="fade-up" data-aos-delay="150">
-          Partner with Velvora Global Exim for premium-quality agricultural
-          exports and reliable international trade solutions.
+        <p className="cta-eyebrow">
+          LET'S CONNECT
+        </p>
+
+        <h2>
+          Looking for Agricultural
+          <span> Products from India?</span>
+        </h2>
+
+        <p
+          className="cta-description"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          Tell us what you are looking for. We would be happy to discuss
+          your product, packing and sourcing requirements.
         </p>
 
         <div
@@ -19,15 +33,25 @@ function CallToAction() {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <button className="btn-primary">
-            Send Inquiry
-          </button>
 
-          <button className="btn-secondary">
+          <Link
+            to="/contact"
+            className="btn-primary"
+          >
+            Send an Inquiry
+          </Link>
+
+          <Link
+            to="/contact"
+            className="btn-secondary"
+          >
             Contact Us
-          </button>
+          </Link>
+
         </div>
+
       </div>
+
     </section>
   );
 }
