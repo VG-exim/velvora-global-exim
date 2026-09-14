@@ -4,6 +4,7 @@
     padding: 45px;
 
     background: #17212b;
+
     color: #ffffff;
 
     border-radius: 12px;
@@ -22,19 +23,24 @@
 }
 
 .contact-info-eyebrow {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 
-    font-size: 12px;
+    font-size: 15px;
+
     font-weight: 700;
+
     letter-spacing: 2px;
+
+    line-height: 1.5;
 
     color: #c9a227;
 }
 
 .contact-info h2 {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
-    font-size: 34px;
+    font-size: 40px;
+
     line-height: 1.2;
 
     color: #ffffff;
@@ -49,7 +55,8 @@
 
     color: #d5dadd;
 
-    font-size: 15px;
+    font-size: 18px;
+
     line-height: 1.8;
 }
 
@@ -59,6 +66,7 @@
 
 .info-card {
     display: flex;
+
     flex-direction: column;
 
     gap: 26px;
@@ -66,18 +74,22 @@
 
 .info-item {
     display: flex;
+
     align-items: flex-start;
 
     gap: 16px;
+
+    transition: transform 0.3s ease;
 }
 
 .info-icon-wrapper {
     flex-shrink: 0;
 
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -89,21 +101,27 @@
 }
 
 .info-icon {
-    font-size: 19px;
+    font-size: 21px;
 
     color: #c9a227;
 }
 
 .info-item > div:last-child {
     flex: 1;
+
+    min-width: 0;
 }
 
 .info-label {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
 
-    font-size: 10px;
+    font-size: 13px;
+
     font-weight: 700;
+
     letter-spacing: 1.6px;
+
+    line-height: 1.5;
 
     color: #aeb7bd;
 }
@@ -111,7 +129,8 @@
 .info-item h4 {
     margin: 0;
 
-    font-size: 16px;
+    font-size: 19px;
+
     font-weight: 600;
 
     line-height: 1.5;
@@ -120,22 +139,20 @@
 }
 
 .info-detail {
-    margin: 3px 0 0;
+    margin: 4px 0 0;
 
-    font-size: 14px;
+    font-size: 17px;
 
     color: #cbd1d5;
 
-    line-height: 1.6;
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
 }
 
 /* =========================
    HOVER
 ========================= */
-
-.info-item {
-    transition: transform 0.3s ease;
-}
 
 .info-item:hover {
     transform: translateX(4px);
@@ -150,11 +167,25 @@
 ========================= */
 
 @media (max-width: 900px) {
-
     .contact-info {
         padding: 40px 30px;
     }
 
+    .contact-info h2 {
+        font-size: 36px;
+    }
+
+    .info-subtitle {
+        font-size: 17px;
+    }
+
+    .info-item h4 {
+        font-size: 18px;
+    }
+
+    .info-detail {
+        font-size: 16px;
+    }
 }
 
 /* =========================
@@ -162,7 +193,6 @@
 ========================= */
 
 @media (max-width: 768px) {
-
     .contact-info {
         padding: 32px 22px;
 
@@ -173,12 +203,16 @@
         text-align: center;
     }
 
+    .contact-info-eyebrow {
+        font-size: 14px;
+    }
+
     .contact-info h2 {
-        font-size: 29px;
+        font-size: 32px;
     }
 
     .info-subtitle {
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .info-card {
@@ -190,18 +224,25 @@
     }
 
     .info-icon-wrapper {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
     }
 
     .info-icon {
-        font-size: 17px;
+        font-size: 19px;
+    }
+
+    .info-label {
+        font-size: 12px;
     }
 
     .info-item h4 {
-        font-size: 15px;
+        font-size: 17px;
     }
 
+    .info-detail {
+        font-size: 16px;
+    }
 }
 
 /* =========================
@@ -209,13 +250,23 @@
 ========================= */
 
 @media (max-width: 480px) {
-
     .contact-info {
         padding: 28px 18px;
     }
 
     .contact-info h2 {
-        font-size: 27px;
+        font-size: 29px;
     }
 
+    .info-subtitle {
+        font-size: 16px;
+    }
+
+    .info-item h4 {
+        font-size: 16px;
+    }
+
+    .info-detail {
+        font-size: 15px;
+    }
 }

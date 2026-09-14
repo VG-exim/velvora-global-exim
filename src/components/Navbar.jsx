@@ -9,7 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setSticky(window.scrollY > 30);
+      setSticky(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,68 +25,77 @@ function Navbar() {
 
   return (
     <nav className={sticky ? "navbar sticky" : "navbar"}>
+      <div className="navbar-container">
+        <NavLink
+          to="/"
+          className="logo-container"
+          onClick={closeMenu}
+        >
+          <img
+            src={logo}
+            alt="Velvora Global Exim Logo"
+            className="logo"
+          />
+        </NavLink>
 
-      <NavLink
-        to="/"
-        className="logo-container"
-        onClick={closeMenu}
-      >
-        <img
-          src={logo}
-          alt="Velvora Global Exim Logo"
-          className="logo"
-        />
-      </NavLink>
+        <button
+          className="menu-icon"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={
+            menuOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          }
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
 
+        <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+          <li>
+            <NavLink to="/" end onClick={closeMenu}>
+              Home
+            </NavLink>
+          </li>
 
-      <button
-        className="menu-icon"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-        aria-expanded={menuOpen}
-      >
-        {menuOpen ? "✕" : "☰"}
-      </button>
+          <li>
+            <NavLink to="/about" onClick={closeMenu}>
+              About Us
+            </NavLink>
+          </li>
 
+          <li>
+            <NavLink to="/products" onClick={closeMenu}>
+              Products
+            </NavLink>
+          </li>
 
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+          <li>
+            <NavLink
+              to="/export-markets"
+              onClick={closeMenu}
+            >
+              Global Reach
+            </NavLink>
+          </li>
 
-        <li>
-          <NavLink to="/" end onClick={closeMenu}>
-            Home
-          </NavLink>
-        </li>
+          <li>
+            <NavLink to="/contact" onClick={closeMenu}>
+              Contact
+            </NavLink>
+          </li>
+        </ul>
 
-        <li>
-          <NavLink to="/about" onClick={closeMenu}>
-            About Us
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink to="/products" onClick={closeMenu}>
-            Products
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink to="/export-markets" onClick={closeMenu}>
-            Global Markets
-          </NavLink>
-        </li>
-
-        <li>
+        <div className="navbar-actions">
           <NavLink
             to="/contact"
             className="nav-contact"
             onClick={closeMenu}
           >
-            Contact
+            Let's Connect
           </NavLink>
-        </li>
-
-      </ul>
-
+        </div>
+      </div>
     </nav>
   );
 }

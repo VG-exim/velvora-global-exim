@@ -1,7 +1,9 @@
 import "./Footer.css";
+
 import logo from "../assets/logo/logo.png";
 import worldMap from "../assets/world-map/world-map.png";
-import { Link } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
 
 import {
   FaPhoneAlt,
@@ -21,8 +23,8 @@ function Footer() {
 
   return (
     <footer className="footer">
-
       {/* World Map Background */}
+
       <img
         src={worldMap}
         alt="World Map"
@@ -30,11 +32,9 @@ function Footer() {
       />
 
       <div className="footer-container">
-
         {/* Company */}
 
         <div className="footer-section">
-
           <img
             src={logo}
             alt="Velvora Global Exim Logo"
@@ -48,107 +48,107 @@ function Footer() {
           </p>
 
           <p>
-            Exporting premium agricultural products from India
-            to international markets with quality, trust and
-            reliability.
+            Exporting agricultural products from India to international
+            markets with quality, communication and reliability.
           </p>
-
         </div>
 
         {/* Quick Links */}
 
         <div className="footer-section">
-
           <h3>Quick Links</h3>
 
           <ul>
-
-            <li><Link to="/">Home</Link></li>
-
-            <li><Link to="/about">About</Link></li>
-
-            <li><Link to="/products">Products</Link></li>
-
             <li>
-              <Link to="/export-markets">
-                Export Markets
-              </Link>
+              <NavLink to="/" end>
+                Home
+              </NavLink>
             </li>
 
-            <li><Link to="/contact">Contact</Link></li>
+            <li>
+              <NavLink to="/about">
+                About
+              </NavLink>
+            </li>
 
+            <li>
+              <NavLink to="/products">
+                Products
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/export-markets">
+                Export Markets
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/contact">
+                Contact
+              </NavLink>
+            </li>
           </ul>
-
         </div>
 
         {/* Products */}
 
         <div className="footer-section">
-
           <h3>Our Products</h3>
 
           <ul>
-
             <li>🌾 Rice</li>
 
             <li>🌶️ Chilli Powder</li>
 
             <li>🟡 Turmeric Powder</li>
-
           </ul>
-
         </div>
 
         {/* Contact */}
 
         <div className="footer-section">
-
           <h3>Contact Us</h3>
 
           <div className="footer-contact">
-
             <FaPhoneAlt className="footer-icon" />
 
-            <a href="tel:+916363440530">
-              +91 6363440530
+            <a href="tel:+916362185920">
+              +91 6362185920
             </a>
-
           </div>
 
           <div className="footer-contact">
-
             <MdEmail className="footer-icon" />
 
             <a href="mailto:velvoraglobalexim@gmail.com">
               velvoraglobalexim@gmail.com
             </a>
-
           </div>
 
           <div className="footer-contact">
-
             <FaMapMarkerAlt className="footer-icon" />
 
             <div>
-              Near Gunj Area<br />
-              Yadgir District<br />
-              Karnataka - 585202<br />
+              Near Gunj Area
+              <br />
+              Yadgir District
+              <br />
+              Karnataka - 585202
+              <br />
               India
             </div>
-
           </div>
-
         </div>
-
       </div>
 
       <hr />
 
       <div className="copyright">
-
         © 2026 Velvora Global Exim. All Rights Reserved.
 
-        <br /><br />
+        <br />
+        <br />
 
         <a
           href="#top"
@@ -164,9 +164,7 @@ function Footer() {
         >
           <FaArrowUp /> Back to Top
         </a>
-
       </div>
-
     </footer>
   );
 }
